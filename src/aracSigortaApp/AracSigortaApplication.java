@@ -38,6 +38,7 @@ Proje: Araç Sigorta Prim Hesaplama
             System.out.println("1. Haziran 2024");
             System.out.println("2. Aralık 2024");
             int donem= input.nextInt();
+            //String str=input.nextLine();//dummpy
             String donemBilgi=donem==1?"Haziran 2024":"Aralık 2024";
             //tarife donemi dogru girilirse isleme devam et hatali ise uyari verip tekrar forma gonderme islemi yap
             if (donem==1||donem==2){

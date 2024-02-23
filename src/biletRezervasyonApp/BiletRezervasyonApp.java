@@ -31,7 +31,7 @@ project: Bilet Rezervasyon ve Bilet Fiyatı Hesaplama Uygulaması
         */
     public static void main(String[] args) {
         //1- bilet rezervasyonu yapabilmek icin bir otobuse ihtiyacimiz var
-        Bus bus=new Bus("80 ab 80");
+        Bus bus=new Bus("80 ab 80","Techpro","2. peron");
         //3- bilet objesi olusturalim
         Ticket ticket=new Ticket();
         //7-uygulamayi baslatan bir method

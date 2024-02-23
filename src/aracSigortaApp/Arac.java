@@ -9,7 +9,7 @@ public class Arac {
    // kamyon:   3000                       kamyon:   3500
    // otobüs: tip1: 4000 tip2: 5000        otobüs: tip1: 4500 tip2: 5500
    // motosiklet: 1500                     motosiklet: 1750
-
+    //public static String renk;
     public String type;//otobus//otomobil
     public int prim;//tarife donemine gore prim
     //5. prim hesaplama
