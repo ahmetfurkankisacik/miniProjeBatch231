@@ -2,6 +2,7 @@ package loginPageApp;
 
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -9,10 +10,10 @@ public class UserService {
 
     Scanner scan=new Scanner(System.in);
     List<String>emails=new ArrayList<>();
+
     List<String>passwords=new ArrayList<>();
     //3- ad soyad,email,sifre alıp listeye kaydedelim;
     public void register(){
-
         System.out.println("lutfen ad-soyad giriniz");
         String name= scan.nextLine();
         //4- email gecersizse tekrar girmeli
@@ -32,8 +33,8 @@ public class UserService {
          String password;
            boolean isValidPassword;
            do {
-           System.out.println("lutfen sifrenizi olusturunuz : ");
-           password= scan.nextLine();
+            System.out.println("lutfen sifrenizi olusturunuz : ");
+            password= scan.nextLine();
             isValidPassword=validatePassword(password);
         }while (!isValidPassword);
         //6 user olusturmak
@@ -66,6 +67,7 @@ public class UserService {
                 }else {
                     sayac--;
                     System.out.println("sifrenizi yanlis ya da eksik girdiniz lutfen tekrar deneyiniz kalan deneme hakkınız : "+sayac);
+
                 }
             }
         }else {//kullanicin kaydı yoktur tekrar denemesini soyleylim
@@ -85,16 +87,15 @@ public class UserService {
           boolean sembol=password.replaceAll("[\\P{Punct}]","").length()>0;
           if (space){
               System.out.println("password boşluk karakteri içeremez");
-
-          }else if (!lenght){
+          }if (!lenght){
               System.out.println("şifre en az 6 karakter uzunluğunda olmak zorundadir");
-          }else if (!kucukHarf){
+          }if (!kucukHarf) {
               System.out.println("şifre en az 1 tane küçük harf içermek zorundadir");
-          }else if (!buyukHarf){
+          }if (!buyukHarf){
               System.out.println("şifre en az 1 tane büyük harf içermek zorundadir");
-          }else if (!rakam){
+          }if (!rakam){
               System.out.println("şifre en az 1 tane rakam içermek zorundadir");
-          }else if (!sembol){
+          }if (!sembol){
               System.out.println("şifre en az 1 tane sembol içermek zorundadir");
           }
           isValid=!space&&lenght&&kucukHarf&&buyukHarf&&rakam&&sembol;
@@ -143,7 +144,7 @@ public class UserService {
                 secondPart.equals("hotmail.com")||
                 secondPart.equals("yahoo.com");
         if (!checkFirst){
-            System.out.println("Email harf,rakam ve -._ dışında karakter iceremez");
+            System.out.println("Email harf,rakam ved -._ ışında karakter iceremez");
         }else if (!checkSecond){
             System.out.println("Email gmail.com,hotmail.com veya yahoo.com ile bitmelidir!");
         }

@@ -53,8 +53,9 @@ public class LoginPageApp {
             switch (select){
                 case 1: service.register();
                     break;
-                case 2:service.login();
-                break;
+                case 2:
+                    service.login();
+                    break;
                 case 0:
                     System.out.println("iyi günler dileriz...");
                     break;
