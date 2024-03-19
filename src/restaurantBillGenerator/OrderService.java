@@ -41,7 +41,7 @@ public class OrderService {
             listOrders();
 
         }while (dishCode!=0);
-
+         scan.close();
     }
     public void listOrders(){
         this.orderList.forEach(order -> System.out.printf("Siparis kodu:%-5s Lezzet kodu:%-4s Lezzet Adi:%-20s Adet:%-2s tutar:%-5s\n", order.getOrderCode(),order.getDish().getCode(),order.getDish().getName(),order.getNumberOfDish(),order.getOrderPrice()));
@@ -88,7 +88,7 @@ public class OrderService {
         System.out.println("        Mevcut Siparişleriniz        ");
         listOrders();
 
-
+         scan.close();
     }
 
     public void printBill() {

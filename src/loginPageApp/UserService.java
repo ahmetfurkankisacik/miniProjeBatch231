@@ -67,7 +67,9 @@ public class UserService {
                 }else {
                     sayac--;
                     System.out.println("sifrenizi yanlis ya da eksik girdiniz lutfen tekrar deneyiniz kalan deneme hakkınız : "+sayac);
-
+                    if (sayac==0){
+                        throw new passwordException("deneme hakkınız bitti 15 dk sonra tekrar deneyiniz");
+                    }
                 }
             }
         }else {//kullanicin kaydı yoktur tekrar denemesini soyleylim
